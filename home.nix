@@ -22,6 +22,7 @@
     olympus
     ffmpeg
     losslesscut
+    gh
     # window manager stuff
     xwayland-satellite
     playerctl
@@ -32,7 +33,6 @@
     swaylock
     mako
     swayidle
-    gh
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
