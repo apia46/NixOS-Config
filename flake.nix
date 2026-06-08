@@ -12,7 +12,13 @@
     nixosConfigurations.viva = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
+        ./viva/configuration.nix
+      ];
+    };
+    nixosConfigurations.andan = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./andan/configuration.nix
       ];
     };
   };

@@ -5,7 +5,7 @@
 
   home.username = "apia";
   home.homeDirectory = "/home/apia";
-  home.stateVersion = "26.05";
+  home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
     github-desktop
