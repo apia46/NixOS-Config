@@ -1,0 +1,90 @@
+From 7b901d452e19460e9c1efdf255484681cbcc7c6a Mon Sep 17 00:00:00 2001
+From: Apia <96461146+apia46@users.noreply.github.com>
+Date: Sat, 23 May 2026 23:32:34 +1200
+Subject: [PATCH] 	new file:   patches/transparency.patch 	new file:  
+ patches/transparent-titlebar.patch 	new file:  
+ patches/transparent-workbench.patch
+
+---
+ patches/transparency.patch          | 26 ++++++++++++++++++++++++++
+ patches/transparent-titlebar.patch  | 14 ++++++++++++++
+ patches/transparent-workbench.patch | 13 +++++++++++++
+ 3 files changed, 53 insertions(+)
+ create mode 100644 patches/transparency.patch
+ create mode 100644 patches/transparent-titlebar.patch
+ create mode 100644 patches/transparent-workbench.patch
+
+diff --git a/patches/transparency.patch b/patches/transparency.patch
+new file mode 100644
+index 0000000..c2e3044
+--- /dev/null
++++ b/patches/transparency.patch
+@@ -0,0 +1,26 @@
++diff --git a/build/builtin/main.js b/build/builtin/main.js
++index f4dbc6e8325..9b7de8605f9 100644
++--- a/build/builtin/main.js
+++++ b/build/builtin/main.js
++@@ -27,6 +27,8 @@ app.once('ready', () => {
++ 	window = new BrowserWindow({
++ 		width: 800,
++ 		height: 600,
+++		transparent: true,
+++		backgroundColor: "#00000000",
++ 		webPreferences: {
++ 			nodeIntegration: true,
++ 			contextIsolation: false,
++diff --git a/src/vs/platform/theme/electron-main/themeMainServiceImpl.ts b/src/vs/platform/theme/electron-main/themeMainServiceImpl.ts
++index 8a31973e9d1..9ac7e3e932d 100644
++--- a/src/vs/platform/theme/electron-main/themeMainServiceImpl.ts
+++++ b/src/vs/platform/theme/electron-main/themeMainServiceImpl.ts
++@@ -297,7 +297,7 @@ export class ThemeMainService extends Disposable implements IThemeMainService {
++ 	private updateBackgroundColor(windowId: number, splash: IPartsSplash): void {
++ 		for (const window of getAllWindowsExcludingOffscreen()) {
++ 			if (window.id === windowId) {
++-				window.setBackgroundColor(splash.colorInfo.background);
+++				window.setBackgroundColor("#00000000");
++ 				break;
++ 			}
++ 		}
+diff --git a/patches/transparent-titlebar.patch b/patches/transparent-titlebar.patch
+new file mode 100644
+index 0000000..0f96c1a
+--- /dev/null
++++ b/patches/transparent-titlebar.patch
+@@ -0,0 +1,14 @@
++diff --git a/src/vs/workbench/browser/parts/titlebar/titlebarPart.ts b/src/vs/workbench/browser/parts/titlebar/titlebarPart.ts
++index 743f9e6ee8b..be56f0f4e1f 100644
++--- a/src/vs/workbench/browser/parts/titlebar/titlebarPart.ts
+++++ b/src/vs/workbench/browser/parts/titlebar/titlebarPart.ts
++@@ -761,7 +761,8 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
++ 				// To benefit from LCD font rendering, we must ensure that we always set an
++ 				// opaque background color. As such, we compute an opaque color given we know
++ 				// the background color is the workbench background.
++-				return color.isOpaque() ? color : color.makeOpaque(WORKBENCH_BACKGROUND(theme));
+++				WORKBENCH_BACKGROUND(theme); // avoid errors
+++				return color;
++ 			}) || '';
++ 			this.element.style.backgroundColor = titleBackground;
++ 
+diff --git a/patches/transparent-workbench.patch b/patches/transparent-workbench.patch
+new file mode 100644
+index 0000000..811d34e
+--- /dev/null
++++ b/patches/transparent-workbench.patch
+@@ -0,0 +1,13 @@
++diff --git a/src/vs/workbench/browser/style.ts b/src/vs/workbench/browser/style.ts
++index 9250ef3f280..94c7564d070 100644
++--- a/src/vs/workbench/browser/style.ts
+++++ b/src/vs/workbench/browser/style.ts
++@@ -16,7 +16,7 @@ registerThemingParticipant((theme, collector) => {
++ 
++ 	// Background (helps for subpixel-antialiasing on Windows)
++ 	const workbenchBackground = WORKBENCH_BACKGROUND(theme);
++-	collector.addRule(`.monaco-workbench { background-color: ${workbenchBackground}; }`);
+++	collector.addRule(`.monaco-workbench { background-color: transparent !important; }`);
++ 
++ 	// Selection (do NOT remove - https://github.com/microsoft/vscode/issues/169662)
++ 	const windowSelectionBackground = theme.getColor(selectionBackground);
+-- 
+2.53.0
+
