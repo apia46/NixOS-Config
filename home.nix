@@ -102,7 +102,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      rebuild = "./rebuild.sh";
+      rebuild = "~/System/rebuild.sh";
     };
   };
 
