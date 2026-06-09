@@ -37,7 +37,6 @@
 			"dotnetAcquisitionExtension.sharedExistingDotnetPath" = "${pkgs.dotnet-sdk_9}/bin";
 			"godotTools.lsp.serverPort" = 6005; # port should match your Godot configuration
 			"godotTools.editorPath.godot4" = "/home/apia/.nix-profile/bin/godot-mono";
-			"dotnet.server.useOmnisharp" = true;
 		};
 		extensions = with pkgs.vscode-extensions; [
             bbenoist.nix
