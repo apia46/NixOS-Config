@@ -37,7 +37,7 @@
 			"dotnetAcquisitionExtension.sharedExistingDotnetPath" = "${pkgs.dotnet-sdk_9}/bin";
 			"godotTools.lsp.serverPort" = 6005; # port should match your Godot configuration
 			"godotTools.editorPath.godot4" = "/home/apia/.nix-profile/bin/godot-mono";
-			"workbench.colorTheme": "Tomorrow Night Blue"
+			"workbench.colorTheme": "Tomorrow Night Blue";
 		};
 		extensions = with pkgs.vscode-extensions; [
             bbenoist.nix
