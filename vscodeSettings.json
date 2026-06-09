@@ -1,0 +1,37 @@
+{
+    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "${pkgs.dotnet-sdk_9}/bin",
+    "godotTools.lsp.serverPort": 6005,
+    "godotTools.editorPath.godot4": "/home/apia/.nix-profile/bin/godot-mono",
+    "workbench.settings.showAISearchToggle": false,
+    "direnv.restart.automatic": true,
+    "terminal.integrated.initialHint": false,
+    "chat.agent.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "editor.tokenColorCustomizations": {
+        "[Tomorrow Night Blue]": {
+            "textMateRules": [
+                {
+                    "scope": "entity.name.type",
+                    "settings": {"foreground": "#58e0ac"}
+                },
+                {
+                    "scope": "entity.name.function",
+                    "settings": {"foreground": "#ecdeb8"}
+                },
+                {
+                    "scope": "variable",
+                    "settings": {"foreground": "#a8c8ee"}
+                },
+                {
+                    "scope": "storage.type",
+                    "settings": {"foreground": "#9786f5"}
+                },
+                {
+                    "scope": "constant.numeric",
+                    "settings": {"foreground": "#befdc4"}
+                }
+            ]
+        }
+    }
+}
