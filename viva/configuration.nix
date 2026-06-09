@@ -49,8 +49,6 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
-  programs.direnv.enable = true; # .envrc so vscode can have nix.shell
-
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
     font-awesome
@@ -135,6 +133,8 @@
       };
     };
   };
+
+  programs.direnv.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

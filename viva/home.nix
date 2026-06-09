@@ -5,7 +5,7 @@
 
   home.username = "apia";
   home.homeDirectory = "/home/apia";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
     github-desktop
@@ -65,6 +65,7 @@
     # });
     enable = true;
     profiles.default.extensions = with pkgs.vscode-extensions; [
+      mkhl.direnv
       bbenoist.nix
       rust-lang.rust-analyzer
       ritwickdey.liveserver
@@ -81,12 +82,6 @@
         publisher = "kdl-org";
         version = "2.1.3";
         sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
-      }
-      {
-        name = "devenv";
-        publisher = "datakurre";
-        version = "0.6.0";
-        sha256 = "sha256-GyDiPwC7WKxQNDfa96AW3RUKV9w0FsfAiuvxjr9B3UU=";
       }
     ];
   };
