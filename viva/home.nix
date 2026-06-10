@@ -64,6 +64,7 @@
     #   ];
     # });
     enable = true;
+    profiles.apia.userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
     profiles.default.extensions = with pkgs.vscode-extensions; [
       mkhl.direnv
       bbenoist.nix
@@ -86,7 +87,6 @@
         sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
       }
     ];
-    profiles.apia.userSettings.source = ../vscodeSettings.json;
   };
 
   home.file.".local/share/godot/export_templates/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godotPackages_4_6.export-template-mono.version}".source = pkgs.godotPackages_4_6.export-template-mono;
