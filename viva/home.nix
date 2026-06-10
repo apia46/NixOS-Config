@@ -64,7 +64,7 @@
     #   ];
     # });
     enable = true;
-    profiles.apia.userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
+    profiles.default.userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
     profiles.default.extensions = with pkgs.vscode-extensions; [
       mkhl.direnv
       bbenoist.nix
