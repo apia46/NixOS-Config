@@ -1,6 +1,7 @@
-{ configs, pkgs, ... }:
+{ configs, pkgs, inputs, ... }:
 
 {
+
   nixpkgs.config.allowUnfree = true;
 
   home.username = "apia";
@@ -20,30 +21,53 @@
     steam
     dotnetCorePackages.dotnet_9.sdk
     gh
+    mpv
+    # window manager stuff
+    # xwayland-satellite
+    # cliphist
+    # wl-clipboard
+    fuzzel
   ];
+
+  home.pointerCursor = {
+    enable = true;
+    package = with pkgs; capitaine-cursors;
+    size = 32;
+    name = "capitaine-cursors-white";
+  };
+
+  programs.kitty = {
+    enable = true;
+    settings.confirm_os_window_close = 0;
+  };
 
   programs.bash = {
     enable = true;
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch";
+      rebuild = "${../rebuild.sh}";
       gc = "sudo nix-collect-garbage";
     };
   };
 
+  xdg.configFile."niri/config.kdl".source = niri/config.kdl;
+  
+
   programs.vscodium = {
     enable = true;
     profiles.default = {
-      userSettings = {
-        "dotnetAcquisitionExtension.sharedExistingDotnetPath" = "${pkgs.dotnet-sdk_9}/bin";
-        "godotTools.lsp.serverPort" = 6005; # port should match your Godot configuration
-        "godotTools.editorPath.godot4" = "/home/apia/.nix-profile/bin/godot-mono";
-        "workbench.colorTheme" = "Tomorrow Night Blue";
-      };
+      userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
+      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "kdl";
+          publisher = "kdl-org";
+          version = "2.1.3";
+          sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
+        }
       ];
     };
   };

@@ -102,7 +102,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      rebuild = "~/System/rebuild.sh";
+      rebuild = "${../rebuild.sh}";
+      gc = "sudo nix-collect-garbage";
     };
   };
 
