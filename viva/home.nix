@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     github-desktop
+    godot
     godot-mono
     musescore
     obsidian
