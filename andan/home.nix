@@ -23,7 +23,7 @@
     gh
     mpv
     # window manager stuff
-    # xwayland-satellite
+    xwayland-satellite
     # cliphist
     # wl-clipboard
     fuzzel
