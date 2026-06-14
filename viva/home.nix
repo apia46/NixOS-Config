@@ -9,6 +9,7 @@
 
   home.packages = with pkgs; [
     github-desktop
+    godot
     godot-mono
     musescore
     obsidian
@@ -23,6 +24,7 @@
     ffmpeg
     losslesscut
     gh
+    aseprite
     # window manager stuff
     xwayland-satellite
     playerctl
