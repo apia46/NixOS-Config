@@ -62,7 +62,7 @@
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
-        ]
+        ];
     };
   };
 
