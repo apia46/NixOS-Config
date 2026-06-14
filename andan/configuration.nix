@@ -50,6 +50,20 @@
     };
   };
 
+  # https://github.com/niri-wm/niri/discussions/3223
+  # fix for discord streaming; doesnt seem to work
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+    ];
+  };
+
+  systemd.user.services.niri.enableDefaultPath = false;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -87,7 +101,19 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  #services.desktopManager.plasma6.enable = true;
+
+  programs.niri.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${config.programs.niri.package}/bin/niri-session";
+        user = "apia";
+      };
+    };
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
