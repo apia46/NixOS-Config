@@ -27,6 +27,7 @@
     # cliphist
     # wl-clipboard
     fuzzel
+    yazi
   ];
 
   home.pointerCursor = {
