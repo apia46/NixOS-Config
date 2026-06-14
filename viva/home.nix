@@ -24,6 +24,7 @@
     ffmpeg
     losslesscut
     gh
+    aseprite
     # window manager stuff
     xwayland-satellite
     playerctl
