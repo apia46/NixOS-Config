@@ -13,21 +13,27 @@
     };
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
-  let
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, ... } @ inputs:
+    let
       system = "x86_64-linux";
       pkgs = inputs.nixpkgs.legacyPackages.${system};
       pkgsUnstable = inputs.nixpkgs-unstable.legacyPackages.${system};
     in {
     nixosConfigurations.viva = nixpkgs.lib.nixosSystem {
+      inherit system;
       specialArgs = { inherit inputs; };
-      homeConfigurations.apia = inputs.home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = { inherit pkgsUnstable; };
-      modules = [ ./viva/home.nix ];
-    };
       modules = [
         ./viva/configuration.nix
+        home-manager.nixosModules.home-manager
+        ({ config, ... }: {
+          home-manager.extraSpecialArgs = {
+            pkgsUnstable = import nixpkgs-unstable {
+              inherit system;
+              config = config.nixpkgs.config;
+              overlays = config.nixpkgs.overlays;
+            };
+          };
+        })
       ];
     };
     nixosConfigurations.andan = nixpkgs.lib.nixosSystem {

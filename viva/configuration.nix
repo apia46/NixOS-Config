@@ -20,6 +20,9 @@
     ];
   };
 
+  home-manager.backupFileExtension = "backup";
+  home-manager.users.apia = import ./home.nix;
+
   services.mysql = {
     enable = true;
     package = pkgs.mariadb;
