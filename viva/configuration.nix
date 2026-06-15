@@ -21,7 +21,11 @@
   };
 
   home-manager.backupFileExtension = "backup";
-  home-manager.users.apia = import ./home.nix;
+  home-manager.users.apia = home-manager.lib.homeManagerConfiguration {
+    inherit pkgs;
+    extraSpecialArgs = { inherit pkgsUnstable; };
+    modules = [ ./home.nix ];
+  };
 
   services.mysql = {
     enable = true;
