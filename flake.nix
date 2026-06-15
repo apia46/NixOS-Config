@@ -13,12 +13,18 @@
     };
   };
 
-  outputs = { nixpkgs, ... } @ inputs: {
+  outputs = { nixpkgs, ... } @ inputs:
+  let
+      # Replace this with the system of your Home Manager configuration.
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
+    in {
     nixosConfigurations.viva = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       homeConfigurations.apia = inputs.home-manager.lib.homeManagerConfiguration {
-      inherit nixpkgs;
-      extraSpecialArgs = { inherit (inputs.nixpkgs-unstable); };
+      inherit pkgs;
+      extraSpecialArgs = { inherit pkgsUnstable; };
       modules = [ ./home.nix ];
     };
       modules = [
