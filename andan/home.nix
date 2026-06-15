@@ -62,7 +62,7 @@
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
-        ]
+        # ]
         # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         #   {
         #     name = "kdl";
@@ -70,7 +70,7 @@
         #     version = "2.1.3";
         #     sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
         #   }
-        # ];
+        ];
     };
   };
 
