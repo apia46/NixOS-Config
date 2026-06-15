@@ -23,7 +23,7 @@
   home-manager.backupFileExtension = "backup";
   homeConfigurations.apia = inputs.home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
-    extraSpecialArgs = { inherit inputs.nixpkgs-unstable; };
+    extraSpecialArgs = { inherit (inputs.nixpkgs-unstable); };
     modules = [ ./home.nix ];
   };
 
