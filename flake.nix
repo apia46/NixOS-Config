@@ -24,7 +24,7 @@
       homeConfigurations.apia = inputs.home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit pkgsUnstable; };
-      modules = [ ./home.nix ];
+      modules = [ ./viva/home.nix ];
     };
       modules = [
         ./viva/configuration.nix
