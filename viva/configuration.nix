@@ -21,7 +21,7 @@
   };
 
   home-manager.backupFileExtension = "backup";
-  homeConfigurations.apia = home-manager.lib.homeManagerConfiguration {
+  homeConfigurations.apia = inputs.home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
     extraSpecialArgs = { inherit pkgsUnstable; };
     modules = [ ./home.nix ];
