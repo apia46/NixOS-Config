@@ -56,9 +56,9 @@
 
 
 
-  environment.sessionVariables = {
-    QT_QPA_PLATFORMS = "xcb"; # for obs input display; doesnt seem to work
-  };
+  #environment.sessionVariables = {
+  #  QT_QPA_PLATFORM = "xcb"; # for obs input display; doesnt seem to work
+  #};
 
   # https://github.com/niri-wm/niri/discussions/3223
   # fix for discord streaming; doesnt seem to work
