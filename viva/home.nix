@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }:
+{ configs, pkgs, nixpkgs-unstable, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -51,7 +51,7 @@
   };
 
   programs.discord = {
-    package = inputs.nixpkgs-unstable.discord;
+    package = nixpkgs-unstable.discord;
     enable = true;
     settings = {
       SKIP_HOST_UPDATE = true;
