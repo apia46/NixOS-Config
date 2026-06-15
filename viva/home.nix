@@ -1,4 +1,4 @@
-{ configs, pkgs, nixpkgs-unstable, ... }:
+{ configs, pkgs, pkgsUnstable, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
