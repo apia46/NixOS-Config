@@ -16,6 +16,11 @@
   outputs = { nixpkgs, ... } @ inputs: {
     nixosConfigurations.viva = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
+      homeConfigurations.apia = inputs.home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = { inherit (inputs.nixpkgs-unstable); };
+      modules = [ ./home.nix ];
+    };
       modules = [
         ./viva/configuration.nix
       ];
