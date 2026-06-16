@@ -11,7 +11,6 @@
     github-desktop
     godot
     godot-mono
-    godot_4-export-templates-bin
     musescore
     obsidian
     libreoffice
