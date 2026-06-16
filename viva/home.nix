@@ -92,7 +92,7 @@
     ];
   };
 
-  home.file.".".source = pkgs.godot_4-export-templates-bin;
+  home.file."~".source = pkgs.godot_4-export-templates-bin;
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs; [
