@@ -11,6 +11,7 @@
     github-desktop
     godot
     godot-mono
+    godot_4-export-templates-bin
     musescore
     obsidian
     libreoffice
@@ -92,7 +93,6 @@
     ];
   };
 
-  home.file.".local/share/godot/export_templates".source = pkgs.godot_4-export-templates-bin;
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs; [
