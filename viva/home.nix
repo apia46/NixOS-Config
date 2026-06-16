@@ -92,7 +92,7 @@
     ];
   };
 
-  home.file.".local/share/godot/export_templates/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godot_4-export-templates-bin.version}".source = pkgs.godot_4-export-templates-bin;
+  home.file.".local/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godot_4-export-templates-bin.version}".source = pkgs.godot_4-export-templates-bin;
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs; [
