@@ -93,8 +93,6 @@
   };
 
   home.file.".local/share/godot/export_templates/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godot_4-export-templates-bin.version}".source = pkgs.godot_4-export-templates-bin;
-  home.file.".local/share/godot/export_templates/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godotPackages_4_6.export-template-mono.version}".source = pkgs.godotPackages_4_6.export-template-mono;
-
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs; [
