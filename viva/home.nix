@@ -38,7 +38,7 @@
   ];
 
   home.file.".local/share/godot/export_templates/4.6.3.stable".source = "${pkgs.godot_4-export-templates-bin}/share/godot/export_templates/4.6.3.stable";
-  home.file.".local/share/godot/export_templates/4.6.3.stable.mono".source = "${pkgs.godotPackages_4.export-template-mono}/share/godot/export_templates/4.6.3.stable.mono";
+  home.file.".local/share/godot/export_templates/4.6.3.stable.mono".source = "${pkgs.godotPackages_4.export-templates-mono-bin}/share/godot/export_templates/4.6.3.stable.mono";
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-39.8.10"
