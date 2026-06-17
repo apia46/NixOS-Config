@@ -37,7 +37,8 @@
     swayidle
   ];
 
-  home.file.".local/share/godot/export_templates".source = "${pkgs.godot_4-export-templates-bin}/share/godot/export_templates";
+  home.file.".local/share/godot/export_templates/4.6.3.stable".source = "${pkgs.godot_4-export-templates-bin}/share/godot/export_templates/4.6.3.stable";
+  home.file.".local/share/godot/export_templates/4.6.3.stable.mono".source = "${pkgs.godot-mono-template}/share/godot/export_templates/4.6.3.stable.mono";
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-39.8.10"
