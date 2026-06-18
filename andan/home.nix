@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     discord
     github-desktop
+    godot
     godot-mono
     wine
     musescore
