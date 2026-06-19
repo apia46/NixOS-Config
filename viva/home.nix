@@ -25,6 +25,7 @@
     losslesscut
     gh
     aseprite
+    lutris
     # window manager stuff
     xwayland-satellite
     playerctl
