@@ -319,7 +319,9 @@ window-rule {
 }
 
 window-rule {
-    match app-id="I Wanna Lockpick exe"
+    match title="I Wanna Lockpick"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 608; }
     open-floating true
 }
 
