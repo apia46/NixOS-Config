@@ -26,6 +26,7 @@
     gh
     aseprite
     lutris
+    yt-dlp
     # window manager stuff
     xwayland-satellite
     playerctl
