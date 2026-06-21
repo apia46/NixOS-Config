@@ -63,6 +63,14 @@
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "gdshader-lsp";
+            publisher = "godofavacyn";
+            version = "1.0.7";
+            #sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
+          }
         # ]
         # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         #   {
