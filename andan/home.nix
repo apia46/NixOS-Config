@@ -69,7 +69,7 @@
             name = "gdshader-lsp";
             publisher = "godofavacyn";
             version = "1.0.7";
-            #sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
+            sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
           }
         # ]
         # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
