@@ -71,14 +71,12 @@
             version = "1.0.7";
             sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
           }
-        # ]
-        # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        #   {
-        #     name = "kdl";
-        #     publisher = "kdl-org";
-        #     version = "2.1.3";
-        #     sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
-        #   }
+          {
+            name = "kdl";
+            publisher = "kdl-org";
+            version = "2.1.3";
+            sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
+          }
         ];
     };
   };
