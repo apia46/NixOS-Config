@@ -23,6 +23,7 @@
     dotnetCorePackages.dotnet_9.sdk
     gh
     mpv
+    dotnet-sdk-wrapped
     # window manager stuff
     xwayland-satellite
     # cliphist
