@@ -20,7 +20,6 @@
     git
     aseprite
     steam
-    dotnetCorePackages.dotnet_9.sdk
     gh
     mpv
     dotnetCorePackages.dotnet_10.sdk
