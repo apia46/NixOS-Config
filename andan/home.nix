@@ -69,7 +69,7 @@
           name = "kylin-cpp-pack";
           publisher = "KylinIdeTeam";
           version = "0.2.0";
-        #   sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
+           sha256 = "sha256-RL94DM/jzCLpRVB91h3PIdhRg7In2AWM4zmNFpQdZF4=";
         }
         {
           name = "kdl";
