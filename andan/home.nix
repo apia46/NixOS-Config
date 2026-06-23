@@ -64,21 +64,21 @@
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
-        ]
-        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          # {
-          #   name = "gdshader-lsp";
-          #   publisher = "godofavacyn";
-          #   version = "1.0.7";
-          #   sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
-          # }
-          {
-            name = "kdl";
-            publisher = "kdl-org";
-            version = "2.1.3";
-            sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
-          }
-        ];
+        ms-vscode.cpptools
+      # ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        # {
+        #   name = "gdshader-lsp";
+        #   publisher = "godofavacyn";
+        #   version = "1.0.7";
+        #   sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
+        # }
+        # {
+        #   name = "kdl";
+        #   publisher = "kdl-org";
+        #   version = "2.1.3";
+        #   sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
+        # }
+      ];
     };
   };
 
