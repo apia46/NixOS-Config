@@ -75,7 +75,7 @@
           name = "kylin-clangd";
           publisher = "kylinideteam";
           version = "0.6.0";
-          #sha256 = "sha256-RL94DM/jzCLpRVB91h3PIdhRg7In2AWM4zmNFpQdZF4=";
+          sha256 = "sha256-JWghoSokd93NCTN7+LwFkyIxzZBoZ0mc77aNDr+BdJk=";
         }
         {
           name = "cppdebug";
