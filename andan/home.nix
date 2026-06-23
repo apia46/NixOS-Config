@@ -81,7 +81,7 @@
           name = "cppdebug";
           publisher = "kylinideteam";
           version = "0.4.0";
-          #sha256 = "sha256-RL94DM/jzCLpRVB91h3PIdhRg7In2AWM4zmNFpQdZF4=";
+          sha256 = "sha256-7biMU0hWmQu5oNHnuSady0iOVLJTvlWj1Dli52xPg/w=";
         }
         {
           name = "kdl";
