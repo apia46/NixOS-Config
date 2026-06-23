@@ -59,18 +59,19 @@
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
       extensions = with pkgs.vscode-extensions; [
+        mkhl.direnv
         bbenoist.nix
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          {
-            name = "gdshader-lsp";
-            publisher = "godofavacyn";
-            version = "1.0.7";
-            sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
-          }
+          # {
+          #   name = "gdshader-lsp";
+          #   publisher = "godofavacyn";
+          #   version = "1.0.7";
+          #   sha256 = "sha256-NMGIijmTb9DNgEKvQdaIeWt688ztZjgte8m2ZPMg8r4=";
+          # }
           {
             name = "kdl";
             publisher = "kdl-org";

@@ -50,6 +50,8 @@
     };
   };
 
+  programs.direnv.enable = true;
+
   # https://github.com/niri-wm/niri/discussions/3223
   # fix for discord streaming; doesnt seem to work
   xdg.portal = {
