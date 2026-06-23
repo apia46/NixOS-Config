@@ -69,7 +69,7 @@
           name = "kylin-cmake-tools";
           publisher = "kylinideteam";
           version = "0.3.1";
-          #sha256 = "sha256-RL94DM/jzCLpRVB91h3PIdhRg7In2AWM4zmNFpQdZF4=";
+          sha256 = "sha256-Fk4Kln9VmuR24KjY+yfyKmrkv9LBYBBwOLJXATpzZ7k=";
         }
         {
           name = "kylin-clangd";
