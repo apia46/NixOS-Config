@@ -22,7 +22,7 @@
     steam
     gh
     mpv
-    dotnetCorePackages.dotnet_10.sdk
+    dotnetCorePackages.dotnet_8.sdk
     # window manager stuff
     xwayland-satellite
     # cliphist
