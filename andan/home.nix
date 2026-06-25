@@ -9,7 +9,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-    discord
+    #discord
     github-desktop
     godot
     godot-mono
