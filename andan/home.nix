@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     discord
     github-desktop
+    godot
     godot-mono
     wine
     musescore
@@ -19,14 +20,15 @@
     git
     aseprite
     steam
-    dotnetCorePackages.dotnet_9.sdk
     gh
     mpv
+    dotnetCorePackages.dotnet_10.sdk
     # window manager stuff
-    # xwayland-satellite
+    xwayland-satellite
     # cliphist
     # wl-clipboard
     fuzzel
+    yazi
   ];
 
   home.pointerCursor = {
@@ -57,11 +59,18 @@
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
       extensions = with pkgs.vscode-extensions; [
+        mkhl.direnv
         bbenoist.nix
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "kylin-cpp-pack";
+          publisher = "KylinIdeTeam";
+          version = "0.2.0";
+           sha256 = "sha256-RL94DM/jzCLpRVB91h3PIdhRg7In2AWM4zmNFpQdZF4=";
+        }
         {
           name = "kdl";
           publisher = "kdl-org";

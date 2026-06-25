@@ -1,5 +1,6 @@
 {
-    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "${pkgs.dotnet-sdk_9}/bin",
+    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "${pkgs.dotnet-sdk_10}/bin",
+    "search.quickOpen.includeHistory": false,
     "godotTools.lsp.serverPort": 6005,
     "godotTools.editorPath.godot4": "/home/apia/.nix-profile/bin/godot-mono",
     "workbench.settings.showAISearchToggle": false,
