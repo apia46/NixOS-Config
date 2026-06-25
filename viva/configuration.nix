@@ -118,21 +118,21 @@
   services.xserver.enable = true;
 
   services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # https://wiki.nixos.org/wiki/Niri
   # config at ~/.config/niri/config.kdl
-  programs.niri.enable = true;
+  # programs.niri.enable = true;
 
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${config.programs.niri.package}/bin/niri-session";
-        user = "apia";
-      };
-    };
-  };
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = {
+  #       command = "${config.programs.niri.package}/bin/niri-session";
+  #       user = "apia";
+  #     };
+  #   };
+  # };
 
   programs.direnv.enable = true;
 
