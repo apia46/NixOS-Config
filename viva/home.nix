@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }:
+{ configs, pkgs, pkgsUnstable, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -25,6 +25,8 @@
     losslesscut
     gh
     aseprite
+    lutris
+    yt-dlp
     # window manager stuff
     xwayland-satellite
     playerctl
@@ -36,6 +38,9 @@
     mako
     swayidle
   ];
+
+  home.file.".local/share/godot/export_templates/4.6.3.stable".source = "${pkgs.godot_4-export-templates-bin}/share/godot/export_templates/4.6.3.stable";
+  home.file.".local/share/godot/export_templates/4.6.3.stable.mono".source = "${pkgs.godotPackages_4.export-templates-mono-bin}/share/godot/export_templates/4.6.3.stable.mono";
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-39.8.10"
@@ -51,6 +56,7 @@
   };
 
   programs.discord = {
+    package = pkgsUnstable.discord;
     enable = true;
     settings = {
       SKIP_HOST_UPDATE = true;
@@ -90,8 +96,6 @@
       }
     ];
   };
-
-  home.file.".local/share/godot/export_templates/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godotPackages_4_6.export-template-mono.version}".source = pkgs.godotPackages_4_6.export-template-mono;
 
   programs.obs-studio = {
     enable = true;
