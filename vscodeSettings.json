@@ -10,6 +10,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "git.enableSmartCommit": true,
     "workbench.colorTheme": "Tomorrow Night Blue",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "editor.tokenColorCustomizations": {
         "[Tomorrow Night Blue]": {
             "textMateRules": [
