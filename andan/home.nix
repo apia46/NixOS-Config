@@ -31,12 +31,12 @@
     yazi
   ];
 
-  home.pointerCursor = {
-    enable = true;
-    package = with pkgs; capitaine-cursors;
-    size = 32;
-    name = "capitaine-cursors-white";
-  };
+  # home.pointerCursor = {
+  #   enable = true;
+  #   package = with pkgs; capitaine-cursors;
+  #   size = 32;
+  #   name = "capitaine-cursors-white";
+  # };
 
   programs.kitty = {
     enable = true;
