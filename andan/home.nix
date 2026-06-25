@@ -9,7 +9,7 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-    #discord
+    discord
     github-desktop
     godot
     godot-mono
@@ -31,12 +31,12 @@
     yazi
   ];
 
-  # home.pointerCursor = {
-  #   enable = true;
-  #   package = with pkgs; capitaine-cursors;
-  #   size = 32;
-  #   name = "capitaine-cursors-white";
-  # };
+  home.pointerCursor = {
+    enable = true;
+    package = with pkgs; capitaine-cursors;
+    size = 32;
+    name = "capitaine-cursors-white";
+  };
 
   programs.kitty = {
     enable = true;
