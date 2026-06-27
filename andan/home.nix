@@ -66,10 +66,22 @@
         ms-dotnettools.vscode-dotnet-runtime
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
-          name = "kylin-cpp-pack";
-          publisher = "KylinIdeTeam";
-          version = "0.2.0";
-           sha256 = "sha256-RL94DM/jzCLpRVB91h3PIdhRg7In2AWM4zmNFpQdZF4=";
+          name = "kylin-cmake-tools";
+          publisher = "kylinideteam";
+          version = "0.3.1";
+          sha256 = "sha256-Fk4Kln9VmuR24KjY+yfyKmrkv9LBYBBwOLJXATpzZ7k=";
+        }
+        {
+          name = "kylin-clangd";
+          publisher = "kylinideteam";
+          version = "0.6.0";
+          sha256 = "sha256-JWghoSokd93NCTN7+LwFkyIxzZBoZ0mc77aNDr+BdJk=";
+        }
+        {
+          name = "cppdebug";
+          publisher = "kylinideteam";
+          version = "0.4.0";
+          sha256 = "sha256-7biMU0hWmQu5oNHnuSady0iOVLJTvlWj1Dli52xPg/w=";
         }
         {
           name = "kdl";
