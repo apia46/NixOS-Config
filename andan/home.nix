@@ -31,12 +31,14 @@
     yazi
   ];
 
-  home.pointerCursor = {
-    enable = true;
-    package = with pkgs; phinger-cursors;
-    size = 32;
-    name = "phinger-cursors-light";
-  };
+  # home.pointerCursor = {
+  #   enable = true;
+  #   package = with pkgs; phinger-cursors;
+  #   size = 32;
+  #   name = "phinger-cursors-light";
+  # };
+
+  home.file.".icons/default".source = "${pkgs.phinger-cursors}/share/icons/phinger-cursors-light";
 
   programs.kitty = {
     enable = true;
