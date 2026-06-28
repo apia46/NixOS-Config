@@ -33,9 +33,9 @@
 
   home.pointerCursor = {
     enable = true;
-    package = with pkgs; capitaine-cursors;
+    package = with pkgs; phinger-cursors;
     size = 32;
-    name = "capitaine-cursors-white";
+    name = "phinger-cursors-light";
   };
 
   programs.kitty = {
