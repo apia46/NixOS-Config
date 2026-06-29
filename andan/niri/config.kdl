@@ -572,6 +572,6 @@ gestures {
 }
 
 cursor {
-    xcursor-theme "capitaine-cursors-white"
-    xcursor-size 32
+    xcursor-theme "phinger-cursors-white"
+    xcursor-size 24
 }
