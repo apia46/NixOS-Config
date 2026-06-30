@@ -22,7 +22,7 @@
     steam
     gh
     mpv
-    filelight
+    kdePackages.filelight
     # dotnetCorePackages.dotnet_10.sdk
     # window manager stuff
     xwayland-satellite
