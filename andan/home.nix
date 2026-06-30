@@ -48,7 +48,7 @@
     enable = true;
     shellAliases = {
       rebuild = "${../rebuild.sh}";
-      gc = "sudo nix-collect-garbage";
+      gc = "sudo nix-collect-garbage -d";
     };
   };
 
