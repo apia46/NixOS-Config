@@ -22,6 +22,7 @@
     steam
     gh
     mpv
+    gt5
     # dotnetCorePackages.dotnet_10.sdk
     # window manager stuff
     xwayland-satellite
