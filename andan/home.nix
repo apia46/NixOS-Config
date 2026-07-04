@@ -94,5 +94,6 @@
     };
   };
 
-  home.file.".local/share/godot/export_templates/${builtins.replaceStrings [ "-" ] [ "." ] pkgs.godotPackages_4_6.export-template-mono.version}".source = pkgs.godotPackages_4_6.export-template-mono;
+  home.file.".local/share/godot/export_templates/4.6.3.stable".source = "${pkgs.godot_4-export-templates-bin}/share/godot/export_templates/4.6.3.stable";
+  home.file.".local/share/godot/export_templates/4.6.3.stable.mono".source = "${pkgs.godotPackages_4.export-templates-mono-bin}/share/godot/export_templates/4.6.3.stable.mono";
 }
