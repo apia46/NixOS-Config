@@ -365,7 +365,7 @@ binds {
     Mod+X hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+V { spawn-sh "/etc/nixos/niri/cliphist-fuzzel-img.sh"; }
+    Mod+V { spawn-sh "~/System/viva/niri/cliphist-fuzzel-img.sh"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.

@@ -95,6 +95,24 @@
         version = "2.1.3";
         sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM";
       }
+      {
+        name = "kylin-cmake-tools";
+        publisher = "kylinideteam";
+        version = "0.3.1";
+        sha256 = "sha256-Fk4Kln9VmuR24KjY+yfyKmrkv9LBYBBwOLJXATpzZ7k=";
+      }
+      {
+        name = "kylin-clangd";
+        publisher = "kylinideteam";
+        version = "0.6.0";
+        sha256 = "sha256-JWghoSokd93NCTN7+LwFkyIxzZBoZ0mc77aNDr+BdJk=";
+      }
+      {
+        name = "cppdebug";
+        publisher = "kylinideteam";
+        version = "0.4.0";
+        sha256 = "sha256-7biMU0hWmQu5oNHnuSady0iOVLJTvlWj1Dli52xPg/w=";
+      }
     ];
   };
 
