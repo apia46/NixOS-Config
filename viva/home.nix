@@ -27,6 +27,7 @@
     aseprite
     lutris
     yt-dlp
+    gamescope
     # window manager stuff
     xwayland-satellite
     playerctl
