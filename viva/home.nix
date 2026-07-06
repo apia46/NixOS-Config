@@ -11,7 +11,7 @@
     github-desktop
     godot
     godot-mono
-    musescore
+    pkgsUnstable.musescore
     obsidian
     libreoffice
     git
