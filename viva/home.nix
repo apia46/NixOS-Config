@@ -28,6 +28,7 @@
     lutris
     yt-dlp
     gamescope
+    prismlauncher
     # window manager stuff
     xwayland-satellite
     playerctl
