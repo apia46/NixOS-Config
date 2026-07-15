@@ -29,6 +29,7 @@
     yt-dlp
     gamescope
     prismlauncher
+    btop
     # window manager stuff
     xwayland-satellite
     playerctl
