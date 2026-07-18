@@ -157,6 +157,7 @@
 
   services.printing = {
     enable = true;
+    logLevel = "debug";
     drivers = with pkgs; [
       cups-filters
       cups-browsed
