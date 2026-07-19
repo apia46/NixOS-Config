@@ -31,6 +31,7 @@
     prismlauncher
     btop
     archipelago
+    openssl
     # window manager stuff
     xwayland-satellite
     playerctl
