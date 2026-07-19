@@ -32,7 +32,7 @@
     btop
     archipelago
     openssl
-    wine
+    wineWow64Packages.stable
     # window manager stuff
     xwayland-satellite
     playerctl
