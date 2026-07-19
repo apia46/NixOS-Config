@@ -30,6 +30,7 @@
     gamescope
     prismlauncher
     btop
+    archipelago
     # window manager stuff
     xwayland-satellite
     playerctl
