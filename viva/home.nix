@@ -34,6 +34,7 @@
     openssl
     wineWow64Packages.stable
     winetricks
+    protontricks
     # window manager stuff
     xwayland-satellite
     playerctl
