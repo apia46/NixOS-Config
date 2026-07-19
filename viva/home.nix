@@ -33,6 +33,7 @@
     archipelago
     openssl
     wineWow64Packages.stable
+    winetricks
     # window manager stuff
     xwayland-satellite
     playerctl
