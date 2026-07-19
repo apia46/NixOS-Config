@@ -26,8 +26,8 @@
     # dotnetCorePackages.dotnet_10.sdk
     # window manager stuff
     xwayland-satellite
-    # cliphist
-    # wl-clipboard
+    cliphist
+    wl-clipboard
     fuzzel
     yazi
   ];
