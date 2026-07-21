@@ -23,7 +23,7 @@
     gh
     mpv
     kdePackages.filelight
-    # dotnetCorePackages.dotnet_10.sdk
+    dotnetCorePackages.dotnet_10.sdk
     # window manager stuff
     xwayland-satellite
     cliphist
