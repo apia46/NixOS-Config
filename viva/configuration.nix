@@ -37,9 +37,9 @@
         };
       }
     ];
-     settings.mysqld = {
-       skip_networking = true;
-     };
+    settings.mysqld = {
+      skip_networking = true;
+    };
   };
 
   programs.steam = {
