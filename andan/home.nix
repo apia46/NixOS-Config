@@ -13,7 +13,8 @@
     github-desktop
     godot
     godot-mono
-    wine
+    wineWow64Packages.stable
+    winetricks
     musescore
     obsidian
     libreoffice
