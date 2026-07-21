@@ -30,7 +30,6 @@
     wl-clipboard
     fuzzel
     yazi
-    upower
   ];
 
   home.pointerCursor = {

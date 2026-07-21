@@ -20,6 +20,8 @@
     ];
   };
 
+  services.upower.enable = true;
+
   home-manager.backupFileExtension = "backup";
   home-manager.users.apia = import ./home.nix;
 
