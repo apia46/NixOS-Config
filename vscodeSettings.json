@@ -1,5 +1,5 @@
 {
-    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "/home/apia/.nix-profile/bin/dotnet",
+    "dotnetAcquisitionExtension.sharedExistingDotnetPath": "${dotnetCorePackages.dotnet_10}/bin",
     "search.quickOpen.includeHistory": false,
     "godotTools.lsp.serverPort": 6005,
     "godotTools.editorPath.godot4": "/home/apia/.nix-profile/bin/godot-mono",

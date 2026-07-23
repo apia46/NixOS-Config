@@ -58,6 +58,7 @@
 
   programs.vscodium = {
     enable = true;
+    mutableExtensionsDir = true;
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
       extensions = with pkgs.vscode-extensions; [
