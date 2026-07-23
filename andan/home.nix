@@ -1,4 +1,4 @@
-{ configs, pkgs, inputs, ... }:
+{ configs, pkgs, pkgsUnstable, ... }:
 
 {
 
@@ -15,7 +15,7 @@
     godot-mono
     wineWow64Packages.stable
     winetricks
-    musescore
+    pkgsUnstable.musescore
     obsidian
     libreoffice
     git
