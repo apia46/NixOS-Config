@@ -37,7 +37,7 @@
     enable = true;
     defaultApplications = {
       "application/pdf" = "net.waterfox.waterfox.desktop";
-    }
+    };
   };
 
   home.pointerCursor = {
