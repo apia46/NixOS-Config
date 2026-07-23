@@ -41,6 +41,16 @@
       modules = [
         ./andan/configuration.nix
         ./andan/noctalia.nix
+        home-manager.nixosModules.home-manager
+        ({ config, ... }: {
+          home-manager.extraSpecialArgs = {
+            pkgsUnstable = import nixpkgs-unstable {
+              inherit system;
+              config = config.nixpkgs.config;
+              overlays = config.nixpkgs.overlays;
+            };
+          };
+        })
       ];
     };
   };
