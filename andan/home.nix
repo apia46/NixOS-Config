@@ -33,6 +33,13 @@
     yazi
   ];
 
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "net.waterfox.waterfox.desktop";
+    }
+  };
+
   home.pointerCursor = {
     enable = true;
     package = with pkgs; phinger-cursors;
