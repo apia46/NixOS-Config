@@ -65,7 +65,7 @@ input {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-//spawn-sh-at-startup "mpvpaper -o \"mute loop-playlist\" HDMI-A-2 ~/Videos/left.mp4"
+spawn-sh-at-startup "murale ~/Videos/left.mp4 --output HDMI-A-2"
 output "HDMI-A-2" { // left
     mode "1920x1080@60.000"
     scale 1
@@ -74,7 +74,7 @@ output "HDMI-A-2" { // left
     focus-at-startup
 }
 
-//spawn-sh-at-startup "mpvpaper -o \"mute loop-playlist\" DP-1 ~/Videos/right.mp4"
+spawn-sh-at-startup "murale ~/Videos/right.mp4 --output DP-1"
 output "DP-1" { // right
     mode "1920x1080@144.000"
     scale 1
