@@ -1,3 +1,6 @@
+let
+  murale = import ../derivations/murale.nix;
+in
 { configs, pkgs, pkgsUnstable, ... }:
 
 {
@@ -19,7 +22,6 @@
     krita
     fastfetch
     mpv
-    devenv
     olympus
     ffmpeg
     losslesscut
@@ -35,6 +37,7 @@
     wineWow64Packages.stable
     winetricks
     protontricks
+    murale
     # window manager stuff
     xwayland-satellite
     playerctl
