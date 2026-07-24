@@ -7,7 +7,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     owner = "brenton-keller";
     repo = "murale";
     rev = "8461aace00fbda96fbf3e988b314e9dbef1e1a4d";
-    hash = "sha256-gyWnahj1A+iXUQlQ1O1H1u7K5euYQOld9qWm99Vjaeg=";
+    hash = lib.fakeHash;
   };
 
   cargoHash = lib.fakeHash;
