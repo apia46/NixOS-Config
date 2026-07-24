@@ -1,4 +1,4 @@
-{ configs, pkgs, inputs, ... }:
+{ configs, pkgs, pkgsUnstable, ... }:
 
 {
 
@@ -13,8 +13,9 @@
     github-desktop
     godot
     godot-mono
-    wine
-    musescore
+    wineWow64Packages.stable
+    winetricks
+    pkgsUnstable.musescore
     obsidian
     libreoffice
     git
@@ -23,14 +24,21 @@
     gh
     mpv
     kdePackages.filelight
-    # dotnetCorePackages.dotnet_10.sdk
+    dotnetCorePackages.dotnet_10.sdk
     # window manager stuff
     xwayland-satellite
-    # cliphist
-    # wl-clipboard
+    cliphist
+    wl-clipboard
     fuzzel
     yazi
   ];
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "net.waterfox.waterfox.desktop";
+    };
+  };
 
   home.pointerCursor = {
     enable = true;
@@ -57,15 +65,24 @@
 
   programs.vscodium = {
     enable = true;
+    mutableExtensionsDir = true;
     profiles.default = {
       userSettings = builtins.fromJSON (builtins.readFile ../vscodeSettings.json);
       extensions = with pkgs.vscode-extensions; [
         mkhl.direnv
         bbenoist.nix
+        rust-lang.rust-analyzer
+        ritwickdey.liveserver
         geequlim.godot-tools
         ms-dotnettools.csharp
         ms-dotnettools.vscode-dotnet-runtime
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "tera";
+          publisher = "karunamurti";
+          version = "0.0.9";
+          sha256 = "sha256-e72lZXg//vCZwoggRrpJlYiNUMxID3rkDLLBtV1b098";
+        }
         {
           name = "kylin-cmake-tools";
           publisher = "kylinideteam";

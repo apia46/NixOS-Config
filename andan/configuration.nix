@@ -20,8 +20,29 @@
     ];
   };
 
+  services.upower.enable = true;
+
   home-manager.backupFileExtension = "backup";
   home-manager.users.apia = import ./home.nix;
+
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+    ensureDatabases = [
+      "quicksilver"
+    ];
+    ensureUsers = [
+      {
+        name = "apia";
+        ensurePermissions = {
+         "*.*" = "ALL PRIVILEGES";
+        };
+      }
+    ];
+    settings.mysqld = {
+      skip_networking = true;
+    };
+  };
 
   programs.steam = {
     enable = true;
