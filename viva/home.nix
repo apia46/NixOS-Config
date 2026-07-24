@@ -34,8 +34,8 @@
     wineWow64Packages.stable
     winetricks
     protontricks
-    (pkgs.callPackage ../derivations/murale.nix {})
     # window manager stuff
+    (callPackage ../derivations/murale.nix {})
     xwayland-satellite
     playerctl
     mpvpaper
