@@ -8,6 +8,7 @@
   home.homeDirectory = "/home/apia";
   home.stateVersion = "25.11";
 
+  # https://discourse.nixos.org/t/niri-xwayland-satellite-black-steam-window-fix/77107
   nixpkgs.overlays = [
     (final: prev: {
       steam = prev.steam.override {
