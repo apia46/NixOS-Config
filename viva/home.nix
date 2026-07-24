@@ -161,7 +161,7 @@
     settings.confirm_os_window_close = 0;
     settings = {
       background = "#272637";
-      background_opacity = 0.6;
+      background_opacity = 0.7;
       background_blur = 4;
     };
   };
