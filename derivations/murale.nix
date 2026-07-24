@@ -8,10 +8,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
     owner = "brenton-keller";
     repo = "murale";
     rev = "8461aace00fbda96fbf3e988b314e9dbef1e1a4d";
-    hash = lib.fakeHash;
+    hash = "sha256-UUHIboFU4aES1zQ2RwuG4dIFSiVpyhy3+WVgbbCEteo=";
   };
 
-  cargoHash = lib.fakeHash;
+  cargoHash = "sha256-+jlkV+umcbHpPYbwdx0qrzuMkxA7RkSQ2BoYy0xEkck=";
 
   meta = {
     description = "Lean, memory-safe video wallpaper player for Wayland compositors";
