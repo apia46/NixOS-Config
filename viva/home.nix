@@ -152,7 +152,7 @@
     enable = true;
     shellAliases = {
       rebuild = "${../rebuild.sh}";
-      gc = "${../finalise.sh}";
+      finalise = "${../finalise.sh}";
     };
   };
 
