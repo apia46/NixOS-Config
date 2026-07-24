@@ -1,4 +1,12 @@
-{ lib, fetchFromGitHub, rustPlatform, }:
+{
+  lib,
+  fetchFromGitHub,
+  rustPlatform,
+  pkg-config,
+  wayland,
+  libxkbcommon,
+  mpv,
+}:
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "ripgrep";
@@ -10,6 +18,16 @@ rustPlatform.buildRustPackage (finalAttrs: {
     rev = "8461aace00fbda96fbf3e988b314e9dbef1e1a4d";
     hash = "sha256-UUHIboFU4aES1zQ2RwuG4dIFSiVpyhy3+WVgbbCEteo=";
   };
+
+  nativeBuildInputs = [
+    pkg-config
+  ];
+
+  buildInputs = [
+    wayland
+    libxkbcommon
+    mpv
+  ];
 
   cargoHash = "sha256-+jlkV+umcbHpPYbwdx0qrzuMkxA7RkSQ2BoYy0xEkck=";
 
