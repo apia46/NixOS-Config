@@ -325,6 +325,12 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match title="Wine Desktop"
+    default-column-width { fixed 1896; }
+    default-window-height { fixed 1037; }
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
