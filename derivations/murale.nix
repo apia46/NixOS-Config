@@ -15,7 +15,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
   meta = {
     description = "Lean, memory-safe video wallpaper player for Wayland compositors";
     homepage = "https://github.com/brenton-keller/murale";
-    license = lib.licenses.mit;
+    license = [ lib.licenses.mit ];
     maintainers = [ ];
   };
 })
+
