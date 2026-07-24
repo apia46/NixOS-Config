@@ -2,6 +2,7 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "ripgrep";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "brenton-keller";
