@@ -1,6 +1,3 @@
-let
-  murale = import ../derivations/murale.nix;
-in
 { configs, pkgs, pkgsUnstable, ... }:
 
 {
@@ -37,7 +34,7 @@ in
     wineWow64Packages.stable
     winetricks
     protontricks
-    murale
+    (pkgs.callPackage ../derivations/murale.nix {})
     # window manager stuff
     xwayland-satellite
     playerctl
