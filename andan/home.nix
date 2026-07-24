@@ -8,6 +8,14 @@
   home.homeDirectory = "/home/apia";
   home.stateVersion = "25.11";
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      steam = prev.steam.override {
+        extraArgs = "-cef-disable-gpu-compositing";
+      };
+    })   
+  ];
+
   home.packages = with pkgs; [
     discord
     github-desktop
