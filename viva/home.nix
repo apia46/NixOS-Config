@@ -152,7 +152,7 @@
     enable = true;
     shellAliases = {
       rebuild = "${../rebuild.sh}";
-      gc = "sudo nix-collect-garbage -d";
+      gc = "${../finalise.sh}";
     };
   };
 
