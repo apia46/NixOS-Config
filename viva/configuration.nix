@@ -144,6 +144,8 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = true;  # see the note above
 
+  services.earlyoom.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "nz";
