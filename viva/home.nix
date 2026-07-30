@@ -19,7 +19,6 @@
     krita
     fastfetch
     mpv
-    devenv
     olympus
     ffmpeg
     losslesscut
@@ -30,7 +29,13 @@
     gamescope
     prismlauncher
     btop
+    archipelago
+    openssl
+    wineWow64Packages.stable
+    winetricks
+    protontricks
     # window manager stuff
+    (callPackage ../derivations/murale.nix {})
     xwayland-satellite
     playerctl
     mpvpaper
@@ -40,7 +45,24 @@
     swaylock
     mako
     swayidle
+    yazi
   ];
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "net.waterfox.waterfox.desktop";
+      "video/x-msvideo" = "mpv.desktop";
+      "video/mp4" = "mpv.desktop";
+      "video/mpeg" = "mpv.desktop";
+      "video/webm" = "mpv.desktop";
+      "audio/mp4" = "mpv.desktop";
+      "audio/mpeg" = "mpv.desktop";
+      "audio/ogg" = "mpv.desktop";
+      "audio/wav" = "mpv.desktop";
+      "audio/webm" = "mpv.desktop";
+    };
+  };
 
   home.file.".local/share/godot/export_templates/4.6.3.stable".source = "${pkgs.godot_4-export-templates-bin}/share/godot/export_templates/4.6.3.stable";
   home.file.".local/share/godot/export_templates/4.6.3.stable.mono".source = "${pkgs.godotPackages_4.export-templates-mono-bin}/share/godot/export_templates/4.6.3.stable.mono";
@@ -130,22 +152,18 @@
     enable = true;
     shellAliases = {
       rebuild = "${../rebuild.sh}";
-      gc = "sudo nix-collect-garbage -d";
+      finalise = "${../finalise.sh}";
     };
   };
 
   programs.kitty = {
     enable = true;
+    settings.confirm_os_window_close = 0;
     settings = {
       background = "#272637";
-      background_opacity = 0.5;
+      background_opacity = 0.7;
       background_blur = 4;
     };
-  };
-
-  programs.yazi = {
-    enable = true;
-    
   };
 
   programs.waybar = {
