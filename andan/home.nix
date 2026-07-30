@@ -24,6 +24,7 @@
     godot-mono
     wineWow64Packages.stable
     winetricks
+    arduino
     pkgsUnstable.musescore
     obsidian
     libreoffice
