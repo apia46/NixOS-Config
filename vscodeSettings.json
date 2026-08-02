@@ -11,6 +11,7 @@
     "git.enableSmartCommit": true,
     "workbench.colorTheme": "Tomorrow Night Blue",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "clangd.preferBundledClangd": false,
     "editor.tokenColorCustomizations": {
         "[Tomorrow Night Blue]": {
             "textMateRules": [
