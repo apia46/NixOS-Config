@@ -32,6 +32,7 @@
     aseprite
     steam
     gh
+    fastfetch
     mpv
     kdePackages.filelight
     dotnetCorePackages.dotnet_10.sdk
