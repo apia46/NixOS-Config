@@ -34,6 +34,7 @@
     gh
     fastfetch
     mpv
+    steam-run
     kdePackages.filelight
     dotnetCorePackages.dotnet_10.sdk
     btop
