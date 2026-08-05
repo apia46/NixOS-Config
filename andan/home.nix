@@ -8,6 +8,15 @@
   home.homeDirectory = "/home/apia";
   home.stateVersion = "25.11";
 
+  # https://discourse.nixos.org/t/niri-xwayland-satellite-black-steam-window-fix/77107
+  nixpkgs.overlays = [
+    (final: prev: {
+      steam = prev.steam.override {
+        extraArgs = "-cef-disable-gpu-compositing";
+      };
+    })   
+  ];
+
   home.packages = with pkgs; [
     discord
     github-desktop
@@ -15,6 +24,7 @@
     godot-mono
     wineWow64Packages.stable
     winetricks
+    arduino
     pkgsUnstable.musescore
     obsidian
     libreoffice
@@ -25,6 +35,7 @@
     mpv
     kdePackages.filelight
     dotnetCorePackages.dotnet_10.sdk
+    btop
     # window manager stuff
     xwayland-satellite
     cliphist
@@ -56,7 +67,7 @@
     enable = true;
     shellAliases = {
       rebuild = "${../rebuild.sh}";
-      gc = "sudo nix-collect-garbage -d";
+      finalise = "${../finalise.sh}";
     };
   };
 
