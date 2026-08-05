@@ -34,6 +34,7 @@
     wineWow64Packages.stable
     winetricks
     protontricks
+    butler
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
