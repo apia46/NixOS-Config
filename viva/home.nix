@@ -38,6 +38,7 @@
     meson
     ninja
     libclang
+    libllvm
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
