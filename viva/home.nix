@@ -36,6 +36,9 @@
     protontricks
     butler
     meson
+    ninja
+    clang
+    gdb
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
