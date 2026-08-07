@@ -35,6 +35,7 @@
     winetricks
     protontricks
     butler
+    meson
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
