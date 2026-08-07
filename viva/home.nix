@@ -37,9 +37,7 @@
     butler
     meson
     ninja
-    clang
-    gdb
-    clangd
+    libclang
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
