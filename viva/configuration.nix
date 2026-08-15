@@ -150,6 +150,12 @@
   hardware.nvidia.open = true;
   services.earlyoom.enable = true;
 
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "nvidia";
+    MOZ_DISABLE_RDD_SANDBOX = 1;
+    NVD_BACKEND = "direct";
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "nz";
