@@ -142,7 +142,13 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;  # see the note above
+  hardware.nvidia.open = true;
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+    ];
+  };
 
   services.earlyoom.enable = true;
 
