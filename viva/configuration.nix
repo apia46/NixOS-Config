@@ -139,17 +139,15 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
     ];
   };
-
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = true;
   services.earlyoom.enable = true;
 
   # Configure keymap in X11
