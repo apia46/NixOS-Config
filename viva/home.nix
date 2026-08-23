@@ -24,7 +24,6 @@
     losslesscut
     gh
     aseprite
-    lutris
     yt-dlp
     gamescope
     prismlauncher
