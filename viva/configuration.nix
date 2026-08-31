@@ -54,12 +54,6 @@
     font-awesome
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
-
-
-  #environment.sessionVariables = {
-  #  QT_QPA_PLATFORM = "xcb"; # for obs input display; doesnt seem to work
-  #};
-
   # https://github.com/niri-wm/niri/discussions/3223
   # fix for discord streaming; doesnt seem to work
   xdg.portal = {
@@ -139,12 +133,22 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+    ];
+  };
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;  # see the note above
-
+  hardware.nvidia.open = true;
   services.earlyoom.enable = true;
+
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "nvidia";
+    MOZ_DISABLE_RDD_SANDBOX = 1;
+    NVD_BACKEND = "direct";
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {

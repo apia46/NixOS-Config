@@ -24,7 +24,6 @@
     losslesscut
     gh
     aseprite
-    lutris
     yt-dlp
     gamescope
     prismlauncher
@@ -35,6 +34,11 @@
     winetricks
     protontricks
     butler
+    meson
+    ninja
+    libclang
+    libllvm
+    lld
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
