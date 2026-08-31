@@ -9,14 +9,14 @@
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
-  pname = "ripgrep";
-  version = "1.0.0";
+  pname = "murale";
+  version = "1.1.0";
 
   src = fetchFromGitHub {
     owner = "brenton-keller";
     repo = "murale";
-    rev = "8461aace00fbda96fbf3e988b314e9dbef1e1a4d";
-    hash = "sha256-UUHIboFU4aES1zQ2RwuG4dIFSiVpyhy3+WVgbbCEteo=";
+    rev = "f7e57869b0748202882e8c4390334eb544254193";
+    hash = "";
   };
 
   nativeBuildInputs = [
