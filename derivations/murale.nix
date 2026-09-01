@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     owner = "brenton-keller";
     repo = "murale";
     rev = "27f23af17bcd93cbafc2ad8176e9f626dbe8d503";
-    hash = "";
+    hash = "sha256-jW0v3brKGc4xtQfrr/a/dtxxquWKAv3vVJc/L+fb1Is=";
   };
 
   nativeBuildInputs = [
