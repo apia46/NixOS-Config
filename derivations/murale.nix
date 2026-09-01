@@ -29,7 +29,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mpv
   ];
 
-  cargoHash = "sha256-i5DMAUfgDnrQSPNwTwToseNHu0iFHObvaZ6Fn++fTS4=";
+  cargoHash = "sha256-hAt25aOuQTMCBqBo/Jh0ssnhZe/KJOiqMOSFrAXH0nI=";
 
   meta = {
     description = "Lean, memory-safe video wallpaper player for Wayland compositors";
