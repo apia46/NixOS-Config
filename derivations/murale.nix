@@ -15,8 +15,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "brenton-keller";
     repo = "murale";
-    rev = "27f23af17bcd93cbafc2ad8176e9f626dbe8d503";
-    hash = "sha256-jW0v3brKGc4xtQfrr/a/dtxxquWKAv3vVJc/L+fb1Is=";
+    rev = "30445b4816b84bc4ff93b577537b01376117ce10";
+    hash = "";
   };
 
   nativeBuildInputs = [
