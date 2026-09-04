@@ -111,7 +111,7 @@
       geequlim.godot-tools
       ms-dotnettools.csharp
 			ms-dotnettools.vscode-dotnet-runtime
-      vscode-extensions.eamodio.gitlens
+      eamodio.gitlens
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "tera";
