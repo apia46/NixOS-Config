@@ -17,6 +17,7 @@
     "gitlens.telemetry.enabled": false,
     "gitlens.showWhatsNewAfterUpgrades": false,
     "gitlens.advanced.skipOnboarding": true,
+    "gitlens.launchpad.indicator.enabled": false,
     "editor.tokenColorCustomizations": {
         "[Tomorrow Night Blue]": {
             "textMateRules": [
