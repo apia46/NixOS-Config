@@ -39,6 +39,7 @@
     libclang
     libllvm
     lld
+    neovim
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
