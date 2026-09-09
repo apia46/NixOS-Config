@@ -40,6 +40,7 @@
     libllvm
     lld
     neovim
+    ripgrep
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
