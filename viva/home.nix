@@ -42,6 +42,11 @@
     neovim
     ripgrep
     fd
+    rustc
+    cargo
+    gcc
+    rustfmt
+    clippy
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
