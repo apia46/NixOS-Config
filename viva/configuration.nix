@@ -130,6 +130,11 @@
 
   programs.direnv.enable = true;
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

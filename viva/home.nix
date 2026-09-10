@@ -39,7 +39,6 @@
     libclang
     libllvm
     lld
-    neovim
     ripgrep
     fd
     rustc
