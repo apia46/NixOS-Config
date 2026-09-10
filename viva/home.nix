@@ -48,6 +48,7 @@
     clippy
     rust-analyzer
     fzf
+    tree-sitter
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
