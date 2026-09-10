@@ -47,6 +47,7 @@
     gcc
     rustfmt
     clippy
+    rust-analyzer
     fzf
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
