@@ -41,11 +41,8 @@
     lld
     ripgrep
     fd
-    pkgsUnstable.rustc
-    cargo
+    rustup
     gcc
-    rustfmt
-    clippy
     rust-analyzer
     fzf
     tree-sitter
