@@ -41,7 +41,7 @@
     lld
     ripgrep
     fd
-    rustc
+    pkgsUnstable.rustc
     cargo
     gcc
     rustfmt
