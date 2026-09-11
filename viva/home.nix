@@ -43,7 +43,6 @@
     fd
     rustup
     gcc
-    rust-analyzer
     fzf
     tree-sitter
     # window manager stuff
