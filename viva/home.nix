@@ -45,6 +45,7 @@
     gcc
     fzf
     tree-sitter
+	jq
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
