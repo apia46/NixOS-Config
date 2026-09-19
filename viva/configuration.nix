@@ -49,6 +49,13 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+
+	];
+  };
+
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
     font-awesome
