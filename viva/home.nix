@@ -8,6 +8,7 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
+    _7zz
     github-desktop
     godot
     godot-mono
