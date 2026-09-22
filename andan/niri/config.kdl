@@ -65,7 +65,7 @@ input {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-//spawn-sh-at-startup "mpvpaper -o \"mute loop-playlist\" HDMI-A-2 ~/Videos/left.mp4"
+spawn-sh-at-startup "murale ~/Videos/left.mp4 --mpv-options \"mute=yes\""
 output "eDP-1" {
     mode "1366x768@60.003"
     scale 1

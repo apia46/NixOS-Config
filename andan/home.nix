@@ -37,6 +37,7 @@
     kdePackages.filelight
     dotnetCorePackages.dotnet_10.sdk
     btop
+    rustup
     # window manager stuff
     xwayland-satellite
     cliphist
