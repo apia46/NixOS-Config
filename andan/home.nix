@@ -38,6 +38,7 @@
     dotnetCorePackages.dotnet_10.sdk
     btop
     rustup
+    ffmpeg
     # window manager stuff
     xwayland-satellite
     cliphist
