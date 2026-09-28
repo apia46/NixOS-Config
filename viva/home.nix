@@ -47,6 +47,7 @@
     fzf
     tree-sitter
 	jq
+	kdePackages.kdenlive
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
