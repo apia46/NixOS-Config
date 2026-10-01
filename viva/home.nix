@@ -48,7 +48,7 @@
     tree-sitter
     jq
     kdePackages.kdenlive
-    pkg-config
+    sqlx-cli
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
