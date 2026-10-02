@@ -49,6 +49,7 @@
     jq
     kdePackages.kdenlive
     sqlx-cli
+    vscode-css-languageserver
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
