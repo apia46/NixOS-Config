@@ -50,6 +50,8 @@
     kdePackages.kdenlive
     sqlx-cli
     vscode-css-languageserver
+    quick-lint-js
+    typescript-language-server
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
