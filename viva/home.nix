@@ -51,7 +51,7 @@
     sqlx-cli
     vscode-css-languageserver
     quick-lint-js
-    typescript-language-server
+    typescript
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
