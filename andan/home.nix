@@ -24,7 +24,6 @@
     godot-mono
     wineWow64Packages.stable
     winetricks
-    arduino
     pkgsUnstable.musescore
     obsidian
     libreoffice
@@ -32,10 +31,13 @@
     aseprite
     steam
     gh
+    fastfetch
     mpv
+    steam-run
     kdePackages.filelight
     dotnetCorePackages.dotnet_10.sdk
     btop
+    rustup
     # window manager stuff
     xwayland-satellite
     cliphist
