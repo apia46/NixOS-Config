@@ -35,11 +35,13 @@
     winetricks
     protontricks
     butler
+    # cpp stuff (doesnt even work)
     meson
     ninja
     libclang
     libllvm
     lld
+    # neovim stuff
     ripgrep
     fd
     rustup

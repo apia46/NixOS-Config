@@ -39,6 +39,7 @@
     btop
     rustup
     ffmpeg
+    # neovim stuff
     ripgrep
     fd
     gcc
