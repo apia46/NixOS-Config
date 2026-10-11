@@ -49,6 +49,13 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+
+	];
+  };
+
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
     font-awesome
@@ -129,6 +136,11 @@
   };
 
   programs.direnv.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

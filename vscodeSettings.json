@@ -12,6 +12,12 @@
     "workbench.colorTheme": "Tomorrow Night Blue",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "clangd.preferBundledClangd": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.ai.enabled": false,
+    "gitlens.telemetry.enabled": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.advanced.skipOnboarding": true,
+    "gitlens.launchpad.indicator.enabled": false,
     "editor.tokenColorCustomizations": {
         "[Tomorrow Night Blue]": {
             "textMateRules": [

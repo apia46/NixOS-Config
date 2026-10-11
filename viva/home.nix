@@ -8,6 +8,7 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
+    _7zz
     github-desktop
     godot
     godot-mono
@@ -39,6 +40,18 @@
     libclang
     libllvm
     lld
+    ripgrep
+    fd
+    rustup
+    gcc
+    fzf
+    tree-sitter
+    jq
+    kdePackages.kdenlive
+    sqlx-cli
+    vscode-css-languageserver
+    quick-lint-js
+    typescript-language-server
     # window manager stuff
     (callPackage ../derivations/murale.nix {})
     xwayland-satellite
@@ -111,6 +124,7 @@
       geequlim.godot-tools
       ms-dotnettools.csharp
 			ms-dotnettools.vscode-dotnet-runtime
+      eamodio.gitlens
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "tera";
