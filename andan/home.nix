@@ -39,6 +39,17 @@
     btop
     rustup
     ffmpeg
+    ripgrep
+    fd
+    gcc
+    fzf
+    tree-sitter
+    jq
+    kdePackages.kdenlive
+    sqlx-cli
+    vscode-css-languageserver
+    quick-lint-js
+    typescript-language-server
     # window manager stuff
     xwayland-satellite
     cliphist
